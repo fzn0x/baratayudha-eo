@@ -4,7 +4,7 @@ import { Roboto } from "next/font/google";
 import { Providers } from "./providers";
 import "./globals.css";
 
-const inter = Roboto({ subsets: ["latin"], weight: "900" });
+const roboto = Roboto({ subsets: ["latin"], weight: "900" });
 
 export const metadata: Metadata = {
   title: "Baratayudha Event Organizer - Bandung, Indonesia",
@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" className={roboto.className}>
       <body>
         <div>
           <Providers>{children}</Providers>
