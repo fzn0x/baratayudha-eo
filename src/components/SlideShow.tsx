@@ -28,11 +28,11 @@ const Slideshow = ({ slides }: { slides: { src: string; alt: string }[] }) => {
               style={{
                 position: "absolute",
                 top: 0,
-                left: "50%",
+                overflowX: "hidden",
                 transform: "translateX(-50%)",
               }}
             >
-              <Box position="relative" minW="max-content">
+              <Box position="relative" minW={["400px", "max-content"]} minH="100%">
                 <div style={{ position: "relative" }}>
                   <Image
                     src={slide.src}

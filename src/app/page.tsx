@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div>
       <Box
-        minH={"112vh"}
+        minH={["75vh", "112vh"]}
         bg="#3b444b"
         className="banner-container"
         position={"relative"}
@@ -50,7 +50,7 @@ export default function Home() {
           <Button mt={5} zIndex={99}>
             Hubungi Official CP (Yunita)
           </Button>
-          <Flex direction={"column"} align="center" py={10} zIndex={99}>
+          <Flex direction={"column"} align="center" py={10} zIndex={99} w="100%">
             <Slideshow
               slides={[
                 {
