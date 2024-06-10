@@ -9,7 +9,7 @@ const Slideshow = ({ slides }: { slides: { src: string; alt: string }[] }) => {
   useEffect(() => {
     const timer = setInterval(() => {
       setSlideIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 3000);
+    }, 2000);
 
     return () => clearInterval(timer);
   }, [slides.length]);
@@ -24,7 +24,7 @@ const Slideshow = ({ slides }: { slides: { src: string; alt: string }[] }) => {
               initial={{ opacity: 0.4 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0.4 }}
-              transition={{ duration: 0.7 }}
+              transition={{ duration: 1.5 }}
               style={{
                 position: "absolute",
                 top: 0,
@@ -33,17 +33,6 @@ const Slideshow = ({ slides }: { slides: { src: string; alt: string }[] }) => {
               }}
             >
               <Box position="relative" minW="max-content">
-                <Text
-                  color="#f2f2f2"
-                  fontSize="12px"
-                  p="8px 12px"
-                  position="absolute"
-                  top="0"
-                  left="50%"
-                  transform="translateX(-50%)"
-                >
-                  {index + 1} / {slides.length}
-                </Text>
                 <div style={{ position: "relative" }}>
                   <Image
                     src={slide.src}
